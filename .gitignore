@@ -1,8 +1,8 @@
-logs
-target
-/.idea
-/.idea_modules
-/.classpath
-/.project
-/.settings
-/RUNNING_PID
+# ignore IntelliJ files
+.idea/
+
+# ignore target
+target/
+
+# ignore settings
+env/
