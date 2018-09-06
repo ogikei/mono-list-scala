@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+.container {
+  padding-right: auto;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 /* body */
 body {
   background: #f2f2f2;
