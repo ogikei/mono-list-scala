@@ -12,8 +12,11 @@ function want(sender, itemCode) {
       $(sender).text("Want");
       $(sender).off('click');
       $(sender).on('click', function (e) {
-        doNotWant($(sender), itemCode);
+        doNotWant($(sender), itemCode, reloadFlg);
       });
+      if (reloadFlg) {
+        location.reload();
+      }
     },
     error: function (xhr) {
       alert("Error!: " + xhr.responseText)
@@ -35,8 +38,12 @@ function doNotWant(sender, itemCode) {
       $(sender).text("Want It");
       $(sender).off('click');
       $(sender).on('click', function (e) {
-        want($(sender), itemCode);
+        want($(sender), itemCode, reloadFlg);
       });
+      // reloadFlg時にページをリロードするようにする
+      if (reloadFlg) {
+        location.reload();
+      }
     },
     error: function (xhr) {
       alert("Error!: " + xhr.responseText)

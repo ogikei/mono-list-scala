@@ -26,6 +26,13 @@ footer {
   height: 40px;
 }
 
+.horizon {
+  /*border: 0;*/
+  /*height: 0;*/
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 /* cover */
 .cover {
   margin-top: -20px;
