@@ -65,8 +65,12 @@ function have(sender, itemCode) {
       $(sender).text("Have");
       $(sender).off('click');
       $(sender).on('click', function (e) {
-        doNotHave($(sender), itemCode);
+        doNotHave($(sender), itemcode, reloadflg);
       });
+      // reloadFlg時にページをリロードするようにする
+      if (reloadFlg) {
+        location.reload();
+      }
     },
     error: function (xhr) {
       alert("Error!: " + xhr.responseText)
@@ -88,8 +92,12 @@ function doNotHave(sender, itemCode) {
       $(sender).text("Have It");
       $(sender).off('click');
       $(sender).on('click', function (e) {
-        have($(sender), itemCode);
+        have($(sender), itemcode, reloadflg);
       });
+      // reloadFlg時にページをリロードするようにする
+      if (reloadFlg) {
+        location.reload();
+      }
     },
     error: function (xhr) {
       alert("Error!: " + xhr.responseText)
