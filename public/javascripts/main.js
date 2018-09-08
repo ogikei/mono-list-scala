@@ -65,7 +65,7 @@ function have(sender, itemCode, reloadFlg) {
       $(sender).text("Have");
       $(sender).off('click');
       $(sender).on('click', function (e) {
-        doNotHave($(sender), itemcode, reloadflg);
+        doNotHave($(sender), itemCode, reloadFlg);
       });
       // reloadFlg時にページをリロードするようにする
       if (reloadFlg) {
@@ -92,7 +92,7 @@ function doNotHave(sender, itemCode, reloadFlg) {
       $(sender).text("Have It");
       $(sender).off('click');
       $(sender).on('click', function (e) {
-        have($(sender), itemcode, reloadflg);
+        have($(sender), itemCode, reloadFlg);
       });
       // reloadFlg時にページをリロードするようにする
       if (reloadFlg) {
